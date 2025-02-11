@@ -1,11 +1,11 @@
 # Delhi Assembly Election Result - 2025
 
-1 - NERELA
-2 - BURARI
-3 - TIMARPUR
-4 - ADARSH NAGAR
-5 - BADLI
-6 - RITHALA
+1 - NERELA  
+2 - BURARI  
+3 - TIMARPUR  
+4 - ADARSH NAGAR  
+5 - BADLI  
+6 - RITHALA  
 7 - BAWANA
 8 - MUNDKA
 9 - KIRARI
