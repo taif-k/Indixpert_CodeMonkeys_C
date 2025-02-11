@@ -1,6 +1,6 @@
 #include <stdio.h>
-// This is a comment
-// This is a second comment
+// This is a comment [Push]From Local to Github 
+// This is a second comment  [Pull] Frpm gitHub to Local
 int Narela(int a, int b)
 {
 
