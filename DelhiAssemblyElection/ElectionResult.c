@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// This is a comment
 int Narela(int a, int b)
 {
 
