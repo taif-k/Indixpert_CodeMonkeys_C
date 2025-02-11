@@ -1,6 +1,6 @@
 # Delhi Assembly Election Result - 2025
 
-## In Constituency Number (Ascending order)  
+##  Constituency Number (In Ascending order)  
 1 - NERELA  
 2 - BURARI  
 3 - TIMARPUR  
