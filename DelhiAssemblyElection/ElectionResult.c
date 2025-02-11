@@ -1,5 +1,6 @@
 #include <stdio.h>
 // This is a comment
+// This is a second comment
 int Narela(int a, int b)
 {
 
