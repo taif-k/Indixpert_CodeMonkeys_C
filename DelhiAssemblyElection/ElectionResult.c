@@ -1,6 +1,5 @@
 #include <stdio.h>
-// This is a comment [Push]From Local to Github 
-// This is a second comment  [Pull] From gitHub to Local
+
 int Narela(int a, int b)
 {
 
