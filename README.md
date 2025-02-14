@@ -13,6 +13,7 @@
 1. Clone  
    A. https  
       git clone "repo url" or git clone -b branch_name "repo url"  
+
    B. ssh 
       Generate key(skip if already done)  
       ssh-keygen -t ras -b 4096 -c "email"  
