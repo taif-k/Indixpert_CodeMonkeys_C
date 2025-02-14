@@ -48,7 +48,8 @@
 
    Locally (only delete if fully merged)  
      git branch -d branch_name  
-   Locally (if not merged)  
+   Locally (Force delete - If not merged)  
+     git branch -D branch_name  
     
    Remotely  
    git push origin --delete branch_name 
