@@ -15,21 +15,34 @@
 
       git clone "repo url" or git clone -b branch_name "repo url"  
 
-   B. ssh 
+   B. SSh 
       Generate key(skip if already done)  
 
       ssh-keygen -t ras -b 4096 -c "email"  
+      Start Agent(If not started)   
+        eval "$(ssh-agent -s)"
       Add private key to agent  
-        eval "$(ssh-agent -s)"  
-        ssh-add ~/.ssh/id_rsa  
+        ssh-add ~/.ssh/id_rsa 
+        
       copy public key (then add to github)  
         cat ~/.ssh/id_rsa.pub  
 
 2.  Push (Local changes to Github)  
 
-    git add . (for staging all changes) OR git add filename.extension(for particular file)  
-    git commit -m "commit message"  
-    git push -u origin branch_name OR git push  
+    A. If working on different path and adding from different folder.  
+       working on ( PS D:\Repositories\Indixpert_CodeMonkeys_C\taif\Loop\innerFolder> )   
+       Adding from ( Indixpert -> Tasks(folder) which has four.c and five.c )  
+
+       git add ..\..\..\Tasks\four.c ..\..\..\Tasks\five.c 
+           
+
+    B. Working and Adding from same  
+
+       git add . (for staging all changes) OR git add filename.extension(for particular file)  
+       git commit -m "commit message"  
+       git push -u origin branch_name OR git push  
+
+
 
 3. Pull(Github to Local)  
 
@@ -54,7 +67,14 @@
    Remotely  
    git push origin --delete branch_name 
 
-           
+ 7. Remove files  
+    A. If working and removing from different folders. [Multiple files]  
+
+       git rm path\to\file path\to\file        (Navigate path accordingly where files are present)  
+
+    B. Working and Removing from same folders.  
+
+       git rm .\file_name file_name   
 
   
 
