@@ -12,6 +12,7 @@
 # Git Commands  
 1. Clone  
    A. https  
+
       git clone "repo url" or git clone -b branch_name "repo url"  
 
    B. ssh 
@@ -25,17 +26,21 @@
         cat ~/.ssh/id_rsa.pub  
 
 2.  Push (Local changes to Github)  
+
     git add . (for staging all changes) OR git add filename.extension(for particular file)  
     git commit -m "commit message"  
     git push -u origin branch_name OR git push  
 
 3. Pull(Github to Local)  
+
    git pull remote_name(origin) branch_name  
 
 4. Create Branch  
+
    git branch branch_name  
 
 5. Change Branch  
+
    git checkout branch_name (This will take to the particular branch)  
 
 6. Delete Branch  
