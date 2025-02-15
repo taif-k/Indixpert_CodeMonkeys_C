@@ -125,7 +125,7 @@
 
      or vice -versa  
 
-     git diff branch_two  branch_one              (Green shows that it will be added in development from taif)  
+     git diff branch_two  branch_one              (Green shows that it will be added in development from taif)    
 
 
 
