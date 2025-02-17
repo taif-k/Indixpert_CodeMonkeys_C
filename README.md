@@ -12,7 +12,7 @@ To develope a BMS using concepts of C Programming, System allows user to create 
 
 # Functions to be made  
   1. createaccount()  -  Account number should be exactly 11 digits, Opening balance - 500 (Minimum).   
-  2. deposit()        -  Deposit Amount should be at least 500.  
+  2. deposit()        -  Deposit Amount should be at least 100.    
   3. withdraw()       -  Deduct the amount from total balance.  
   4. checkbalance()   -  Display updated balance for account number.  
   5. displaydetails() -  Display account details.  
