@@ -1,5 +1,5 @@
 
-//                                                 storage array only stores the value according to if condition
+//                                                 store array only stores the value according to if condition
 
 #include <stdio.h>
 
