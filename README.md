@@ -11,12 +11,12 @@ To develope a BMS using concepts of C Programming, System allows user to create 
   5. Taif  
 
 # Functions to be made  
-  1. createaccount()
-  2. deposit()
-  3. withdraw()
-  4. checkbalance()
-  5. displaydetails()
-  6. validatetask()
+  1. createaccount()  -  Account number should be exactly 11 digits, Opening balance - 500 (Minimum).   
+  2. deposit()        -  Deposit Amount should be at least 500.  
+  3. withdraw()       -  Deduct the amount from total balance.  
+  4. checkbalance()   -  Display updated balance for account number.  
+  5. displaydetails() -  Display account details.  
+  6. validatetask()   - Display error message for invalid task number.  
   
    
    
