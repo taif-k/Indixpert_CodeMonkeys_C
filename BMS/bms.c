@@ -11,8 +11,6 @@ int main()
     return 0;
 }
 
-
-
 void createaccount()
 {
     char holdername[10];
