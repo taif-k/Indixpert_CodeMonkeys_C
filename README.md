@@ -22,9 +22,9 @@ To develope a BMS using concepts of C Programming, System allows user to create 
 # Variable names  
 
 1. int count = 0;
-2. char holdername[10];
-3. int openingbalance;
-4. char accountnumber[12];
+2. char holdername[10];    (Account Holder Name)
+3. int openingbalance;      
+4. char accountnumber[12]; 
 5. int depositamount = 0;
 6. int withdrawamount = 0;
-7. int option;
+7. int option;              (To select task number)
