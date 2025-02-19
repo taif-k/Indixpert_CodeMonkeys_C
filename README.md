@@ -19,7 +19,11 @@ To develope a BMS using concepts of C Programming, System allows user to create 
   6. VerifyTaskNo()   - Display error message for invalid task number.  
   
    
-# Variable names  
+# Variable names    
+0. (Take parameters as following)  
+    anumb for accountnumber
+    bal for balance  
+    hname for holdername     
 
 1. int count = 0;
 2. char holdername[10];    (Account Holder Name)
