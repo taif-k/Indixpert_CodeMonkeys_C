@@ -5,6 +5,7 @@ int main() {
     int withdrawAmount;
 
     
+    
     printf("Enter the amount to withdraw:");
     scanf("%d", &withdrawAmount);
 
