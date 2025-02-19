@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void Deposit();
+void Deposit(int bal,char anumb[12]);     // Declaration
 
 int main()
 {
@@ -20,13 +20,13 @@ int main()
             break;
         }
     }
-    Deposit(balance,accountnumber);
+    Deposit(balance,accountnumber);        // Calling has Arguments
 
     return 0;
 }
 
-void Deposit(int bal,char anumb[12])
-{
+void Deposit(int bal,char anumb[12])      // Defination has parameters(Declared with datatypes) 
+{                                               
 
     printf("\nAccount Number: %s", anumb);
     printf("\nTotal Balance: %d", bal);
