@@ -99,10 +99,10 @@ void bms()
         {
             DisplayAccountDetails(accountnumber, holdername, balance);
         }
-        // else if (option == 5)
-        // {
-        //     CheckBalance(accountnumber, balance);
-        // }
+        else if (option == 5)
+        {
+            CheckBalance(accountnumber, balance);
+        }
         else if (option == 0)
         {
             break;
@@ -123,7 +123,6 @@ void createaccount(char anumb[12], char hname[10], int bal)
     printf("\033[37mi\033[0m");
     printf("\033[38;5;220mBank\033[0m");
 
-    printf("\n");
     printf("\n* Account Details ");
     printf("\n* Account number: %s", anumb);
     printf("\n* Account Holder Name: %s", hname);
@@ -143,6 +142,11 @@ void withdraw(char anumb[12], int bal)
     printf("\nTotal Balance: %d", bal);
 }
 
+void CheckBalance(char anumb[12], int bal)
+{
+    printf("\nAccount Number: %s", anumb);
+    printf("\nTotal Balance: %d", bal);
+}
 
 void DisplayAccountDetails(char anumb[12], char hname[10], int bal)
 {
