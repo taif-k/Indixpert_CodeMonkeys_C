@@ -29,9 +29,9 @@ int main()
 
     else if (option == 2) // For Deposit Money
     {
-      // deposit(); 
+      // deposit();
       printf(" say hello");
-      break;
+      break; 
     }
     else if (option == 3) // For Withdraw Your
     {
@@ -60,4 +60,3 @@ int main()
 
   return 0;
 }
-
