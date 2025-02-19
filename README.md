@@ -21,8 +21,8 @@ To develope a BMS using concepts of C Programming, System allows user to create 
    
 # Variable names    
 0. (Take parameters as following)  
-    anumb for accountnumber
-    bal for balance  
+    anumb for accountnumber  
+    bal for balance    
     hname for holdername     
 
 1. int count = 0;
