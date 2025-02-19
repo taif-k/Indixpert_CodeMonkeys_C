@@ -3,15 +3,9 @@
 int main()
 {
     int balance = 500; 
-    int withdrawAmount;
-
-<<<<<<< HEAD
-    
+    int withdrawAmount;    
     
     printf("Enter the amount to withdraw:");
-=======
-    printf("Enter the amount to withdraw: ");
->>>>>>> ca3de85dac728316af0bc3351d31e76824e5f56e
     scanf("%d", &withdrawAmount);
 
     if (withdrawAmount > balance)
