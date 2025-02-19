@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void DisplayAccountDetails();
+void DisplayAccountDetails(char hname[10],int bal,char anumb[12]);    //  Declaration
 
 int main()
 {
@@ -11,16 +11,16 @@ int main()
     printf("Enter 11 digits Account number ");
     scanf(" %s", &accountnumber);
     printf("Enter Account Holder Name: ");
-    scanf(" %[^\n]", &holdername);
+    scanf(" %[^\n]", &holdername);                                      // %[^\n] This will read space except new line
     printf("Enter Account Balance: ");
     scanf(" %d", &balance);
 
-    DisplayAccountDetails(holdername,balance,accountnumber);
+    DisplayAccountDetails(holdername,balance,accountnumber);            // Calling
 
     return 0;
 }
 
-void DisplayAccountDetails(char hname[10],int bal,char anumb[12])
+void DisplayAccountDetails(char hname[10],int bal,char anumb[12])        // Defination
 {
 
     printf("\nAccount Number: %s", anumb);
