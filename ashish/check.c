@@ -9,5 +9,5 @@ scanf("%f",&balance);
 
 printf("your current balance is: %f\n", balance);
 
-    return 0;
+    return 0; 
 }
