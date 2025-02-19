@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int openingbalance;
+int balance;
 char accountnumber[12];
 int depositamount = 0;
 
@@ -20,10 +20,10 @@ void Deposit()
         scanf("%d", &depositamount);
         if (depositamount >= 100)
         {
-            openingbalance = openingbalance + depositamount;
+            balance = balance + depositamount;
             break;
         }
     }
     printf("\nAccount Number: %s", accountnumber);
-    printf("\nTotal Balance: %d", openingbalance);
+    printf("\nTotal Balance: %d", balance);
 }
