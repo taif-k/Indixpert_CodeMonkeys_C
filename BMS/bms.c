@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void createaccount(char anumb[12], char hname[10], int bal);
+void createaccount(char anumb[12], char hname[10], int bal);                         // Declaration
 void Deposit(char anumb[12], int bal);
 void withdraw(char anumb[12], int bal);
 void CheckBalance(char anumb[12], int bal);
@@ -9,7 +9,7 @@ void DisplayAccountDetails(char anumb[12], char hname[10], int bal);
 void VerifyTaskNo();
 void bms();
 
-int main()
+int main()                                                                          // System Defined Function
 {
     printf("\n            ------------------------Banking Managemnt System------------------------");
     printf("\n\n1-Create Account | 2-Deposit Amount | 3-withdraw Amount | 4-Display Balance | 5-Check Balance | 0-Exit");
@@ -17,7 +17,7 @@ int main()
     return 0;
 }
 
-void bms()
+void bms()                                                                           // User defined Function
 {
     int count = 0;
     char holdername[10];
@@ -27,7 +27,7 @@ void bms()
     int withdrawamount = 0;
     int option;
 
-    do
+    do                                                                               // Do-while Loop to handle option 1
     {
         printf("\n\nEnter task number: ");
         scanf("%d", &option);
@@ -55,7 +55,7 @@ void bms()
                     break;
                 }
             }
-            createaccount(accountnumber, holdername, balance);
+            createaccount(accountnumber, holdername, balance);                        // Calling (has Arguments)
         }
         else
         {
@@ -63,8 +63,8 @@ void bms()
         }
     } while (option != 1);
 
-    do
-    {
+    do                                                                             // Do-while Loop to handle rest options
+    { 
         printf("\n\nEnter task number: ");
         scanf("%d", &option);
         if (option == 2)
@@ -119,7 +119,7 @@ void bms()
     } while (count == 0);
 }
 
-void createaccount(char anumb[12], char hname[10], int bal)
+void createaccount(char anumb[12], char hname[10], int bal)                            // Defination (has parameters)
 {
 
     printf("\nWelcome to ");
