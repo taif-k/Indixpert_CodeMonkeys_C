@@ -57,6 +57,10 @@ void bms()
             }
             createaccount(accountnumber, holdername, balance);
         }
+        else
+        {
+            printf("Choose 1 (create account) to proceed further ");
+        }
     } while (option != 1);
 
     do
