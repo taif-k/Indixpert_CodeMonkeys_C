@@ -1,14 +1,13 @@
 #include<stdio.h>
 
-void balance(balance , account);
+void balance(anumb , bal);
 
 int main()
 {
   int balance=0;
   char account[12];
   
-// balance variable
-// account varibale
+
 printf("%d",balance);
 printf("%s",account);
 
