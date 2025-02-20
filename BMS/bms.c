@@ -71,7 +71,7 @@ void bms()
                 scanf("%d", &depositamount);
                 if (depositamount >= 100)
                 {
-                    balance = balance + depositamount;
+                    balance += depositamount;
                     break;
                 }
             }
@@ -91,7 +91,7 @@ void bms()
             }
             else
             {
-                balance = balance - withdrawamount;
+                balance -= withdrawamount;
             }
             withdraw(accountnumber, balance);
         }
