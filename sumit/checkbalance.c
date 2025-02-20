@@ -1,25 +1,28 @@
 #include<stdio.h>
 
-// function declaration(parameter1, parameter2)
-
+void balance(balance , account);
 
 int main()
 {
-  int balance;
-  int account;
+  int balance=0;
+  char account[12];
+  
 // balance variable
 // account varibale
 printf("%d",balance);
-printf("%d",account);
+printf("%s",account);
 
-// input from user for account(scanf)
-// input from user for balance(scanf) 
 scanf("%d",&balance);
-scanf("%d",&account);
-
-// calling of function(Argument1, Argument 2)
+scanf( "%s",&account);
+checkbalance(account,balance);
    return 0;
 }
 
-// void function(parameter1, parameter2){}
-void balance(balance , acoount);
+
+void checkbalance(char anumb[12],int bal)
+{
+  printf("%s",anumb);
+  printf("\n%d",bal);
+
+}
+
