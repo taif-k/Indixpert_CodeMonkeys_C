@@ -2,18 +2,18 @@
 
 int main()
 {
-
-
-    //printf 1 for create account
-    //printf 2....
-    //....so on
+    printf(" Press 1 For Create Account ");
+    printf("\n Press 2 For Deposit Amount ");
+    printf("\n Press 3 For Withdraw Amount ");
+    printf("\n Press 4 For Display Balance ");
+    printf("\n Press 5 For Check Balance ");
+    printf("\n Press 0 For Exit !");
 
 
     return 0;
 }
 
-
-// void function
+void menu();
 
 
 
