@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void checkbalance(char anumb[12],int bal); // Function Declaration
+void checkbalance(char anumb[12],int bal); //  Declaration
 
 int main()
 {
@@ -9,18 +9,18 @@ int main()
   
 
 printf("%d",balance);
-printf("%s",account);
+printf(" %s ",account);
 
 scanf("%d",&balance);
 scanf( "%s",&account);
-checkbalance(account,balance); // Function Calling
+checkbalance(account,balance); //  Calling
    return 0;
 }
 
 void balance (anumb , bal) // Defination
 
 {
-  printf("%s",anumb);
+  printf( " %s ",anumb);
   printf("\n%d",bal);
 
 }
