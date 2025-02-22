@@ -1,17 +1,17 @@
-#include<stdio.h>
- 
-
-int main()
+int main() // System Defined Function
 {
-    printf(" Press 1 For Create Account "); //Create Account
-    printf("\n Press 2 For Deposit Amount "); //Deposit
-    printf("\n Press 3 For Withdraw Amount "); //Withdraw
-    printf("\n Press 4 For Display Balance "); //Diplay Balance
-    printf("\n Press 5 For Check Balance "); // Check Balance
-    printf("\n Press 0 For Exit !");         // Exit
-
-
+  
+    menu();
+ 
     return 0;
 }
 
-void menu();
+void menu()
+{
+
+    printf("\n1- Create Account ");
+    printf("\n2- Enter 2 to Deposit ");
+    printf("\n3- Enter 3 to Withdraw ");
+    printf("\n4- Enter 4 to Display Balance ");
+    printf("\n5- Enter 5 to Check Balance ");
+}
