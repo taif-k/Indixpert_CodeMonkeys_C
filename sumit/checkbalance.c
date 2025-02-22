@@ -1,27 +1,24 @@
 #include<stdio.h>
 
-void checkbalance(char anumb[12],int bal); //  Declaration
+void CheckBalance(char anumb[12], int bal);              //Declaration
 
 int main()
 {
-  int balance=0;
-  char account[12];
-  
+char accountnumber[12];
+int balance;
 
-printf("%d",balance);
-printf(" %s ",account);
+printf("Enter Account Number: ");
+scanf(" %s",&accountnumber);
 
+printf("Enter Balance: ");
 scanf("%d",&balance);
-scanf( "%s",&account);
-checkbalance(account,balance); //  Calling
-   return 0;
+
+CheckBalance(accountnumber,balance);                   // Calling
+
 }
 
-void balance (anumb , bal) // Defination
-
+void CheckBalance(char anumb[12], int bal)             //defination
 {
-  printf( " %s ",anumb);
-  printf("\n%d",bal);
-
+    printf("\nAccount Number: %s", anumb);
+    printf("\nTotal Balance: %d", bal);
 }
-
