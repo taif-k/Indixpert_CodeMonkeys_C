@@ -1,33 +1,48 @@
 #include <stdio.h>
+#include<string.h>
 
-void Deposit(int bal,char anumb[12]);     // Declaration
+void Deposit(int bal); // Declaration
 
 int main()
 {
-    int balance=0;
-    char accountnumber[12];
+    int balance = 0;
     int depositamount = 0;
 
     while (1)
     {
-        printf("Enter 11 Digit Account Number: ");
-        scanf(" %s",&accountnumber);
+        char depositstr[20];
         printf("\nEnter deposit amount ( Minimum-100 ): ");
-        scanf("%d", &depositamount);
-        if (depositamount >= 100)
+        scanf(" %s", &depositstr);
+        int length = strlen(depositstr);
+        int match = 0;
+        for (int i = -0; depositstr[i] != '\0'; i++)
         {
-            balance = balance + depositamount;
-            break;
+            if (depositstr[i] < '0' || depositstr[i] > '9')
+            {
+                match = 1;
+                break;
+            }
+        }
+        if (match == 0)
+        {
+            depositamount = 0;
+            for (int i = 0; i < length; i++)
+            {
+                depositamount = depositamount * 10 + (depositstr[i] - '0');
+            }
+            if (depositamount >= 100)
+            {
+                balance += depositamount;
+                break;
+            }
         }
     }
-    Deposit(balance,accountnumber);        // Calling has Arguments
+    Deposit(balance); // Calling has Arguments
 
     return 0;
 }
 
-void Deposit(int bal,char anumb[12])      // Defination has parameters(Declared with datatypes) 
-{                                               
-
-    printf("\nAccount Number: %s", anumb);
+void Deposit(int bal) // Defination has parameters(Declared with datatypes)
+{   
     printf("\nTotal Balance: %d", bal);
 }
