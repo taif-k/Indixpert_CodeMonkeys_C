@@ -15,7 +15,7 @@ int main()
         scanf(" %s", &depositstr);
         int length = strlen(depositstr);
         int match = 0;
-        for (int i = -0; depositstr[i] != '\0'; i++)
+        for (int i = 0; depositstr[i] != '\0'; i++)
         {
             if (depositstr[i] < '0' || depositstr[i] > '9')
             {
