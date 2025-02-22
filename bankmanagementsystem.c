@@ -48,7 +48,7 @@ void bms() // User defined Function
             while (1)
             {
                 printf("Enter an 11 digit account number: ");
-                scanf(" %s", accountnumber);
+                scanf(" %s", &accountnumber);
                 int length = strlen(accountnumber); //  @ @ 64
 
                 if (length == 11)
@@ -56,7 +56,7 @@ void bms() // User defined Function
                     int flag = 0;
                     for (int i = 0; i < length; i++)
                     {
-                        if (accountnumber[i] < '0' || accountnumber[i] > '9') // 48 57
+                        if (accountnumber[i] < '0' || accountnumber[i] > '9') // 0(48)-9(57)
                         {
                             flag = 1;
                             break;
@@ -73,7 +73,7 @@ void bms() // User defined Function
                             int match = 0;
                             for (int i = 0; holdername[i] != '\0'; i++) //  abcdef\0
                             {
-                                if ((holdername[i] < 'a' || holdername[i] > 'z') && holdername[i] != ' ')
+                                if ((holdername[i] < 'a' || holdername[i] > 'z') && (holdername[i] < 'A' || holdername[i] > 'Z') && holdername[i] != ' ')
                                 {
                                     match = 1;
                                     break;
