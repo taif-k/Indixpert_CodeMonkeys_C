@@ -89,7 +89,7 @@ void bms() // User defined Function
                         {
                             char balanceStr[20];
                             printf("Enter opening balance (Minimum 500): ");
-                            scanf(" %s", &balanceStr);
+                            scanf(" %s", &balanceStr);         //  [a][b][c] [1][0][0]
 
                             int match = 0;
                             int length = strlen(balanceStr);
@@ -139,7 +139,7 @@ void bms() // User defined Function
             {
                 char depositstr[20];
                 printf("\nEnter deposit amount ( Minimum-100 ): ");
-                scanf(" %s", &depositstr);
+                scanf(" %s", &depositstr);   //  [a][b][c] [1][0][0]
                 int length = strlen(depositstr);
                 int match = 0;
                 for (int i = 0; depositstr[i] != '\0'; i++)
@@ -173,7 +173,7 @@ void bms() // User defined Function
             {
                 char withdrawstr[20];
                 printf("\nEnter Withdraw Amount: ");
-                scanf(" %s", &withdrawstr);
+                scanf(" %s", &withdrawstr);                 //  [a][b][c] [1][0][0]
 
                 int match = 0;
                 for (int i = 0; withdrawstr[i] != '\0'; i++)
@@ -205,7 +205,7 @@ void bms() // User defined Function
                         balance -= withdrawamount;
                         break;
                     }
-                } //  [a][b][c] [1][0][0]
+                } 
             }
             withdraw(accountnumber, balance);
         }
