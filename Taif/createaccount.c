@@ -7,6 +7,7 @@ void menu();
 
 int main()
 {
+    menu();
     bms();
     return 0;
 }
