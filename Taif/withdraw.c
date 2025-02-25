@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
-int withdraw(int bal);
+void withdraw(int bal);
 
 int main()
 {
     int balance = 1000;
-    printf("\nBalance returning from withdraw func : %d",withdraw(balance));
+    withdraw(balance);
     return 0;
 }
-
-int withdraw(int bal)
+// only 3 chances to get right amount
+void withdraw(int bal)
 {
     char withdrawstr[20];
     int count = 0;
@@ -55,5 +55,4 @@ int withdraw(int bal)
             }
         }
     } while (count < 3);
-    return bal;
 }

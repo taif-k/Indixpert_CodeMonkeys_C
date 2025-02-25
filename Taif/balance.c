@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-int openingbalance(int bal);
+void openingbalance(int bal);
 
 int main()
 {
     int balance = 0;
-    printf("Minimum - 500 and only digits");
-    printf("Opening balance is: %d", openingbalance(balance));
+    openingbalance(balance);
     return 0;
 }
 
-int openingbalance(int bal)
+void openingbalance(int bal)
 {
 
+    printf("Minimum - 500 and only digits");
     while (1)
     {
         char balancestr[20];
@@ -31,7 +31,7 @@ int openingbalance(int bal)
             }
         }
         if (count == 0)
-        {   
+        {
             bal = 0;
             for (int i = 0; i < length; i++)
             {
@@ -43,5 +43,5 @@ int openingbalance(int bal)
             }
         }
     }
-    return bal;
+    printf("\nOpening balance is : %d", bal);
 }
