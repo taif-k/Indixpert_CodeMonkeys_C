@@ -2,78 +2,38 @@
 #include <string.h>
 
 void createaccount(char anumb[12], char hname[10], int bal); // Declaration(has parameters)
-void bms();
-void menu();
 
 int main()
 {
-    menu();
-    bms();
-    return 0;
-}
 
-void menu()
-{
-    printf("\n1- Create Account ");
-    printf("\n2- Deposit ");
-    printf("\n3- Withdraw ");
-    printf("\n4- Display Details ");
-    printf("\n5- Check Balance ");
-}
-
-void bms()
-{
-    int count = 0;
-    char holdername[15];
-    int balance = 0;
+    char holdername[10];
+    int balance;
     char accountnumber[12];
-    int depositamount = 0;
-    int withdrawamount = 0;
     int option;
 
-    printf("\nEnter task number: ");
-    scanf("%d", &option);
-    if (option == 0)
-    {
-        return;
-    }
-
-    do // Do-while Loop to handle option 1
+    do // do-while
     {
         printf("\n\nEnter task number: ");
-        if (scanf("%d", &option) != 1 || option < 1 || option > 5)
-        {
-            while (getchar() != '\n');
-            continue;
-        }
+        scanf("%d", &option);
 
         if (option == 1)
         {
             while (1)
             {
-                printf("Enter an 11 digit account number (only digits): ");
-                scanf(" %s", &accountnumber);
-                int length = strlen(accountnumber); //  @ @ 64
+                printf("Enter an 11 digit account number: ");
+                scanf(" %s", accountnumber);
+                int length = strlen(accountnumber); //  @@64                               // length of string
 
                 if (length == 11)
                 {
                     int flag = 0;
-                    int zero = 0;
                     for (int i = 0; i < length; i++)
                     {
-                        if (accountnumber[i] < '0' || accountnumber[i] > '9') // 0(48)-9(57)
+                        if (accountnumber[i] < '0' || accountnumber[i] > '9') //   range - 0(48) to  9(57)
                         {
                             flag = 1;
                             break;
                         }
-                        if (accountnumber[i] == '0')
-                        {
-                            zero++;
-                        }
-                    }
-                    if (zero == 11)
-                    {
-                        continue;
                     }
 
                     if (flag == 0)
@@ -84,9 +44,9 @@ void bms()
                             printf("Enter Name: ");
                             scanf(" %[^\n]", &holdername);
                             int match = 0;
-                            for (int i = 0; holdername[i] != '\0'; i++) //  abcdef\0
+                            for (int i = 0; holdername[i] != '\0'; i++) //  abcdef\0 loop will end just before \0, end of string
                             {
-                                if ((holdername[i] < 'a' || holdername[i] > 'z') && (holdername[i] < 'A' || holdername[i] > 'Z') && holdername[i] != ' ')
+                                if ((holdername[i] < 'a' || holdername[i] > 'z') && holdername[i] != ' ')
                                 {
                                     match = 1;
                                     break;
@@ -102,7 +62,7 @@ void bms()
                         {
                             char balanceStr[20];
                             printf("Enter opening balance (Minimum 500): ");
-                            scanf(" %s", &balanceStr); //  [a][b][c] [1][0][0]
+                            scanf(" %s", &balanceStr); // (Balance)input as string
 
                             int match = 0;
                             int length = strlen(balanceStr);
@@ -121,7 +81,7 @@ void bms()
                                 balance = 0;
                                 for (int i = 0; i < length; i++)
                                 {
-                                    balance = balance * 10 + (balanceStr[i] - '0');
+                                    balance = balance * 10 + (balanceStr[i] - '0'); // Converting string to integer
                                 }
 
                                 if (balance >= 500)
@@ -134,18 +94,15 @@ void bms()
                     }
                 }
             }
-            createaccount(accountnumber, holdername, balance);
-        }
-        else if (option == 0)
-        {
-            break;
+            createaccount(accountnumber, holdername, balance); // calling(has Arguments)
         }
         else
         {
-            getchar();
             printf("Choose 1 (create account) to proceed further ");
         }
     } while (option != 1);
+
+    return 0;
 }
 
 void createaccount(char anumb[12], char hname[10], int bal) // Defination (has parameters)
