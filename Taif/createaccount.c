@@ -2,19 +2,49 @@
 #include <string.h>
 
 void createaccount(char anumb[12], char hname[10], int bal); // Declaration(has parameters)
+void bms();
+void menu();
 
 int main()
 {
+    menu();
+    bms();
+    return 0;
+}
 
+void menu()
+{
+    printf("\n1- Create Account ");
+    printf("\n2- Deposit ");
+    printf("\n3- Withdraw ");
+    printf("\n4- Display Details ");
+    printf("\n5- Check Balance ");
+    printf("\n0- Exit ");
+}
+
+void bms()
+{
     char holdername[10];
     int balance;
     char accountnumber[12];
     int option;
 
+    printf("\n\nEnter task number (from 0 to 5): ");
+    scanf("%d", &option);
+    if (option == 0)
+    {
+        return;
+    }
+
     do // do-while
     {
         printf("\n\nEnter task number: ");
-        scanf("%d", &option);
+        if (scanf("%d", &option) != 1 || option < 1 || option > 5)
+        {
+            while (getchar() != '\n')
+                ;
+            continue;
+        }
 
         if (option == 1)
         {
@@ -27,6 +57,7 @@ int main()
                 if (length == 11)
                 {
                     int flag = 0;
+                    int zero = 0;
                     for (int i = 0; i < length; i++)
                     {
                         if (accountnumber[i] < '0' || accountnumber[i] > '9') //   range - 0(48) to  9(57)
@@ -34,6 +65,14 @@ int main()
                             flag = 1;
                             break;
                         }
+                        if (accountnumber[i] == '0')
+                        {
+                            zero++;
+                        }
+                    }
+                    if (zero == 11)
+                    {
+                        continue;
                     }
 
                     if (flag == 0)
@@ -96,13 +135,16 @@ int main()
             }
             createaccount(accountnumber, holdername, balance); // calling(has Arguments)
         }
+        else if (option == 0)
+        {
+            break;
+        }
         else
         {
+            getchar();
             printf("Choose 1 (create account) to proceed further ");
         }
     } while (option != 1);
-
-    return 0;
 }
 
 void createaccount(char anumb[12], char hname[10], int bal) // Defination (has parameters)
