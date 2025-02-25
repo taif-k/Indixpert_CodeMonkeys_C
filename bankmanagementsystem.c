@@ -38,29 +38,49 @@ void bms() // User defined Function
     int withdrawamount = 0;
     int option;
 
+    printf("\nEnter task number: ");
+    scanf("%d", &option);
+    if (option == 0)
+    {
+        return;
+    }
+
     do // Do-while Loop to handle option 1
     {
         printf("\n\nEnter task number: ");
-        scanf("%d", &option);
+        if (scanf("%d", &option) != 1 || option < 1 || option > 5)
+        {
+            while (getchar() != '\n');
+            continue;
+        }
 
         if (option == 1)
         {
             while (1)
             {
-                printf("Enter an 11 digit account number: ");
-                scanf(" %s", accountnumber);
+                printf("Enter an 11 digit account number (only digits): ");
+                scanf(" %s", &accountnumber);
                 int length = strlen(accountnumber); //  @ @ 64
 
                 if (length == 11)
                 {
                     int flag = 0;
+                    int zero = 0;
                     for (int i = 0; i < length; i++)
                     {
-                        if (accountnumber[i] < '0' || accountnumber[i] > '9') // 48 57
+                        if (accountnumber[i] < '0' || accountnumber[i] > '9') // 0(48)-9(57)
                         {
                             flag = 1;
                             break;
                         }
+                        if (accountnumber[i] == '0')
+                        {
+                            zero++;
+                        }
+                    }
+                    if (zero == 11)
+                    {
+                        continue;
                     }
 
                     if (flag == 0)
@@ -73,7 +93,7 @@ void bms() // User defined Function
                             int match = 0;
                             for (int i = 0; holdername[i] != '\0'; i++) //  abcdef\0
                             {
-                                if ((holdername[i] < 'a' || holdername[i] > 'z') && holdername[i] != ' ')
+                                if ((holdername[i] < 'a' || holdername[i] > 'z') && (holdername[i] < 'A' || holdername[i] > 'Z') && holdername[i] != ' ')
                                 {
                                     match = 1;
                                     break;
@@ -89,7 +109,7 @@ void bms() // User defined Function
                         {
                             char balanceStr[20];
                             printf("Enter opening balance (Minimum 500): ");
-                            scanf(" %s", &balanceStr);         //  [a][b][c] [1][0][0]
+                            scanf(" %s", &balanceStr); //  [a][b][c] [1][0][0]
 
                             int match = 0;
                             int length = strlen(balanceStr);
@@ -123,23 +143,33 @@ void bms() // User defined Function
             }
             createaccount(accountnumber, holdername, balance);
         }
+        else if (option == 0)
+        {
+            break;
+        }
         else
         {
+            getchar();
             printf("Choose 1 (create account) to proceed further ");
         }
     } while (option != 1);
 
     do // Do-while Loop to handle rest options
     {
-        printf("\n\nEnter task number: ");
+        printf("\n\nEnter task number : ");
         scanf("%d", &option);
+        if (option == 0)
+        {
+            break;
+        }
+
         if (option == 2)
         {
             while (1)
             {
                 char depositstr[20];
                 printf("\nEnter deposit amount ( Minimum-100 ): ");
-                scanf(" %s", &depositstr);   //  [a][b][c] [1][0][0]
+                scanf(" %s", &depositstr); //  [a][b][c] [1][0][0]
                 int length = strlen(depositstr);
                 int match = 0;
                 for (int i = 0; depositstr[i] != '\0'; i++)
@@ -173,7 +203,7 @@ void bms() // User defined Function
             {
                 char withdrawstr[20];
                 printf("\nEnter Withdraw Amount: ");
-                scanf(" %s", &withdrawstr);                 //  [a][b][c] [1][0][0]
+                scanf(" %s", &withdrawstr); //  [a][b][c] [1][0][0]
 
                 int match = 0;
                 for (int i = 0; withdrawstr[i] != '\0'; i++)
@@ -205,7 +235,7 @@ void bms() // User defined Function
                         balance -= withdrawamount;
                         break;
                     }
-                } 
+                }
             }
             withdraw(accountnumber, balance);
         }

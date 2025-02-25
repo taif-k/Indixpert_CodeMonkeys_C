@@ -1,26 +1,34 @@
 #include <stdio.h>
 
-int main()// program execution ka start point 
-{
-    int balance = 500;   // Initial balance 500 set kar diya  
-    int withdrawAmount;  //ek variable bnega jo user se input lega   
-    
-    printf("Enter the amount to withdraw:");//User se amount input lene ka message
-    scanf("%d", &withdrawAmount);// ka use karke user ki input value store hoti hia 
+void withdraw(int bal); //declaration
 
-    if (withdrawAmount > balance)
+int main()  // system defined function
+{
+    int balance = 500;   // Initial balance 
+    withdraw(balance);   // calling
+    return 0;
+}
+
+void withdraw(int bal)  // defination
+{
+
+    int withdrawAmount=0;  
+    printf("Balance is : %d",bal);
+    printf("\nEnter the amount to withdraw:");
+    scanf("%d", &withdrawAmount); 
+
+    if (withdrawAmount > bal)
     {
-        printf("Insufficient Amount");// Agar blance kam hai toh error message print hoga
+        printf("\nInsufficient Amount");
     }
-    else if (withdrawAmount % 100 != 0) //check kar rha hai ki amoumt 100 ka multiple hai ki nhi                        
+    else if (withdrawAmount % 100 != 0)                         
     {
-        printf("Amount not multiple of 100");//agar 100 ka multiple nahi hai toh error message print hoga 
+        printf("\nAmount not multiple of 100");
     }
     else
     {
-        balance -= withdrawAmount;
+        bal -= withdrawAmount;
         printf("Withdrawal successful!\n");
-        printf("Total Balance: %d", balance);
+        printf("Total Balance: %d", bal);
     }
-    return 0;
 }
