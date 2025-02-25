@@ -12,14 +12,14 @@ int main()
 // only 3 chances to get right amount
 void withdraw(int bal)
 {
-    char withdrawstr[20];
+    char withdrawstr[20]; // Array to store withdraw amount as string
     int count = 0;
     printf("\nBalance from main func: %d", bal);
     do
     {
         count++;
         int withdrawamount = 0;
-        
+
         printf("\nEnter withdraw balance ");
         scanf(" %s", &withdrawstr);
         int length = strlen(withdrawstr); //  abc
@@ -33,11 +33,11 @@ void withdraw(int bal)
                 break;
             }
         }
-        if (flag == 0)
+        if (flag == 0) // this runs of only digits are present in withdraw amount
         {
             for (int i = 0; i < length; i++)
             {
-                withdrawamount = withdrawamount * 10 + (withdrawstr[i] - '0'); // bodmas
+                withdrawamount = withdrawamount * 10 + (withdrawstr[i] - '0'); // strings is converted to integer
             }
 
             if (withdrawamount > bal)
@@ -51,6 +51,7 @@ void withdraw(int bal)
             else
             {
                 bal -= withdrawamount;
+                printf("\nBalance after withdrawl: %d", bal);
                 break;
             }
         }
