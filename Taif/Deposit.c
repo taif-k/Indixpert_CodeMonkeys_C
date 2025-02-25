@@ -1,9 +1,16 @@
 #include <stdio.h>
-#include<string.h>
+#include <string.h>
 
 void Deposit(int bal); // Declaration
+void bms();
 
 int main()
+{
+    bms();
+    return 0;
+}
+
+void bms()
 {
     int balance = 0;
     int depositamount = 0;
@@ -38,11 +45,9 @@ int main()
         }
     }
     Deposit(balance); // Calling has Arguments
-
-    return 0;
 }
 
 void Deposit(int bal) // Defination has parameters(Declared with datatypes)
-{   
+{
     printf("\nTotal Balance: %d", bal);
 }
